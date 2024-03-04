@@ -11,7 +11,7 @@
 
 ## Description
 
-Building a program to study the factors that can contribute to a happier country over time. We will focus on the world’s top 25 saddest countries (based on 2023 data) to create a model to predict what factors have the most impact on influencing people of those countries to be happier over time. We are using data from the World Happiness Report that is available through Kaggle.
+Building a program to study the factors that can contribute to a happier country/region over time. We will focus on the world’s top 25 saddest countries (based on 2023 data) to create a model to predict what factors have the most impact on influencing people of those countries to be happier over time. We are using data from the World Happiness Report that is available through Kaggle.
 
 ## Getting Started
 
@@ -57,12 +57,12 @@ for you and the bottom of the ladder represents the worst possible life for you.
 On which step of the ladder would you say you personally feel you stand at this
 time?”
 
-#### Variable Definitions
-#### Happiness Score (Life Ladder): 
+#### The happiness rankings according to the GWP will be referred to as either "Life Ladder" or "Happiness Score" throughout this project.
 
+### Variable Definitions
 
-- **Life Ladder**
-: A happiness ranking on a scale of 0 to 10.
+- **Life Ladder (Happiness Score)**
+: Happiness ranking on a scale of 0 to 10.
 
 - **Country Name**
 : Name of the country
@@ -98,7 +98,7 @@ time?”
 : Institutional trust
 
 
-### **Data Separation**
+### **Data Splitting For Analysis**
 
 #### We split our data in a few different ways to make our comparisons. 
 #### We first ran our analysis based on the **Region** each country was assigned to. This is the **'Regional Indicator'** column. 
@@ -118,7 +118,7 @@ time?”
 - The global economic recession that impacted our world economy. This took place during 2008 and 2009.
 - The global COVID-19 Pandemic. The impact of this is appparent in 2021 and 2022.
 
-#### Here is a dictionary to explain the  organization of datasets:
+#### Here is a dictionary to explain the  organization of these datasets:
 - **Crash**
 : 2008 & 2009.
 - **COVID**
@@ -128,14 +128,38 @@ time?”
 - **Dystopia**
 : Only Crash and COVID years. All other years are dropped from the data set.
 - **Actual**
-: The entire .csv file, containing all years and corresponding data
+: The entire CSV file, containing all years and corresponding data
+
+## Approach taken to achieve our goals
+1. **Dataset Selection and Modification**
+    - Obtain a complete set of data (2005-2023) in CSV format.
+    - Ensure dataset has at least 500 records (1000 if developing a decision tree/random forest model)
+    - Import selected CSV file into our project repository.
+2. **Cleaning and Refining**
+    - Analyze columns to check for null values.
+    - Identify and clean columns to ensure consistency.
+    - Drop unnecessary columns.
+    - Cleaned data is exported as CSV files for the machine learning model.
+    - Look for correlations in our data (Regionally, and With/Without COVID-19 Pandemic and Economic Crash).
+4. **Data Model Implementation**
+    - Initialize, train, and evaluate a model (or load a pretrained model).
+    - Test model accuracy and tweak until the model demonstrates meaningful predictive power. 
+    - Achieve at least 75% classification accuracy or 0.80 R-squared.
+5. **Data Model Optimization**
+    - The model optimization and evaluation process shows iterative changes made to the model
+    - The resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself.
+    - Overall model performance is printed or displayed at the end of the script.
+6. **Draw Conclusions**
+    - Make observations based on analysis.
 
 
+## Analysis
 ## Conclusions
 - Life Expectancy and per capita is highly correlated to happiness
 - Corruption is very vague.
 
 ## Problems encountered
+
 ## Future Considerations
 
 ## Acknowledgments
@@ -144,4 +168,4 @@ time?”
 - World Happiness Report (2023) Kaggle Data Set -  [https://www.kaggle.com/datasets/sazidthe1/global-happiness-scores-and-factors?select=WHR_2023.csv](https://www.kaggle.com/datasets/sazidthe1/global-happiness-scores-and-factors?select=WHR_2023.csv)
 - Statistical Appendix: Latest version - March 13,2023 - [https://happiness-report.s3.amazonaws.com/2023/WHR+23_Statistical_Appendix.pdf](https://happiness-report.s3.amazonaws.com/2023/WHR+23_Statistical_Appendix.pdf)
 - World Happiness Report Home - [https://worldhappiness.report/](https://worldhappiness.report/)
-- 
+- World map [world map reference link]()
