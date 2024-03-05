@@ -36,28 +36,23 @@ To explore our findings and analysis, follow these steps:
 - MLxtend
 
 ## Goals / Questions to be addressed
-1. We will use data from the World Happiness Report to predict future global happiness.
+1. We used data from the World Happiness Report to predict future global happiness.
 
 2. Based on our findings, we selected other variables to run additional models to study correlations further.
 
-3. We will use those selected variables to predict how much of an impact those variables have on the outcome; with a goal of increasing a particular region's happiness score.
+3. We used those selected variables to predict how much of an impact those variables have on the outcome with a goal of increasing a particular region's happiness score.
 
-4. What would life be like with and without an economic crash (2008 and 2009) and COVID-19 Pandemic (2021 and 2022)? What would it look like in a "Utopia" or "Dystopia"?
-
+4. What would life be like with and without the economic crash of 2008 and 2009 and the COVID-19 pandemic of 2020 and 2021? 
 ## **Data Overview**
 
-#### The __*World Happiness Report (WHR)*__ is a partnership of:
+#### The __World Happiness Report (WHR)__ is a partnership of:
 - Gallup 
 - Oxford Wellbeing Research Centre
-- UN Sustainable Development Solutions Network
+- United Nations Sustainable Development Solutions Network
 - WHR’s Editorial Board
 
-#### To obtain the happiness rankings of each country, the WHR is provided survey responses from the life evaluations of the __Gallup World Poll (GWP)__. Happiness rankings are based on the answers to the Cantril Ladder question:
-> "Please imagine a ladder, with steps numbered from 0 at the
-bottom to 10 at the top.  
-The top of the ladder represents the best possible life
-for you and the bottom of the ladder represents the worst possible life for you.  
-On which step of the ladder would you say you personally feel you stand at this
+#### To obtain the happiness rankings of each country, the WHR provided survey responses from the life evaluations of the __Gallup World Poll (GWP)__. Happiness rankings are based on the answers to the Cantril Ladder question:
+> "Please imagine a ladder, with steps numbered from 0 at the bottom to 10 at the top. The top of the ladder represents the best possible life for you and the bottom of the ladder represents the worst possible life for you. On which step of the ladder would you say you personally feel you stand at this
 time?”
 
 #### The happiness rankings according to the GWP will be referred to as either "Life Ladder" or "Happiness Score" throughout this project.
@@ -65,13 +60,12 @@ time?”
 ### Variable Definitions
 
 - **Life Ladder (Happiness Score)**
-: Happiness ranking on a scale of 0 to 10.
+: Happiness ranking on a scale of 0 (saddest) to 10 (happiest).
 - **Country Name**
-: Name of the country
 - **Regional Indicator**
-: Region in which the country is located
+: Region in which the country is located.
 - **Log GDP Per Capita**
-: The wealth of the country.
+: The wealth of individuals in a country.
 - **Social Support**
 : A value that indicates how many people have family and friends that they can rely on in times of trouble.
 - **Healthy Life Expectancy At Birth**
@@ -91,39 +85,27 @@ time?”
 ### **Data Splitting For Analysis**
 
 #### We split our data in a few different ways to make our comparisons. 
-#### We first ran our analysis based on the **Region** each country was assigned to. This is the **'Regional Indicator'** column. 
+#### We ran our analysis based on the **Region** each country was assigned to. This is the **'Regional Indicator'** column. 
 
-#### **Our Regions**:
+#### **Regions, according to the WHR**:
 - Central and Eastern Europe	
 - Commonwealth of Independent States	
 - East Asia	
 - Latin America and Caribbean	
 - Middle East and North Africa	
-- North America and ANZ	
+- North America and ANZ	(USA, Canada, Australia, New Zealand)
 - Southeast Asia	
 - Sub-Saharan Africa	
 - Western Europe
 
 #### We also considered historical points in time (in the range of our data set, 2005-2023) that may have affected global happiness scores. We decided on **two** major incidents:
 - The global economic recession that impacted our world economy. This took place during 2008 and 2009.
-- The global COVID-19 Pandemic. The impact of this is apparent in 2020 and 2021.
-
-#### Here is a dictionary to explain the organization of these datasets:
-- **Crash**
-: 2008 & 2009.
-- **COVID**
-: 2020 & 2021.
-- **Eutopia**
-: No Crash and No COVID. The years 2008, 2009, 2020, and 2021 are dropped from the dataset. The flaws of our global history are essentially erased.
-- **Dystopia**
-: Only Crash and COVID years. All other years are dropped from the data set.
-- **Actual**
-: The entire CSV file, containing all years and corresponding data
+- The global COVID-19 pandemic of 2020 and 2021.
 
 ## Approach taken to achieve our goals
 1. **Dataset Selection and Modification**
     - Obtain a complete set of data (2005-2023) in CSV format.
-    - Ensure dataset has at least 500 records (1000 if developing a decision tree/random forest model)
+    - Ensure dataset has at least 500 records (1000 if developing a decision tree/random forest model).
     - Import selected CSV file into our project repository.
 2. **Cleaning and Refining**
     - Analyze columns to check for null values.
@@ -137,7 +119,7 @@ time?”
     - Achieve at least 75% classification accuracy or 0.80 R^2 score.
         - We were able to achieve a 0.9316 R^2 score.
 5. **Data Model Optimization**
-    - The model optimization and evaluation process shows iterative changes made to the model
+    - The model optimization and evaluation process shows iterative changes made to the model.
     - The resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself.
     - Overall model performance is printed or displayed at the end of the script.
 6. **Draw Conclusions**
@@ -159,6 +141,7 @@ time?”
 - Life Expectancy and per capita is highly correlated to happiness.
 
 ## Conclusions
+<img src="Resources/happy_panda.jpg" alt="Happy Panda" width="200"/>
 
 - GDP is one of the largest driving factors affecting happiness.
 - Countries will high levels of corruption can still have high levels of happiness.
@@ -187,19 +170,19 @@ time?”
 
 | **File** | **Description** |
 | --- | --- | 
-| **Data Preparation: [Resources Folder](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/tree/main/Resources)** | | 
+| **DATA PREPARATION :** | | 
 | **[WHR 2005 to 2023.csv](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Resources/WHR%202005%20to%202023.csv)** | CSV file containing WHR data from 2005 - 2023  |
 | **[WHR_2005to2023_processed.csv](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Resources/WHR_2005to2023_processed.csv)** | Additonal CSV used for Seaborn |
 | | |
-| **Modeling and Predictions:** | | 
-| **[Correlation_to_HappinessLadder.ipynb](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Correlation_to_HappinessLadder.ipynb)** | All categories relation to happiness Seaborn Regplot  |
-| **[High_Correlation_Attributes_Analysis_(Regional).ipynb](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/High_Correlation_Attributes_Analysis_(Regional).ipynb)** | Most significant correlations to happiness. Seaborn Pairplot| 
+| **MODELING AND PREDICTIONS :** | | 
+| **[Correlation_to_HappinessLadder.ipynb](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Correlation_to_HappinessLadder.ipynb)** | All categories related to happiness Seaborn Regplot  |
+| **[High_Correlation_Attributes_Analysis_(Regional).ipynb](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/High_Correlation_Attributes_Analysis_(Regional).ipynb)** | Most significant correlations to happines using Seaborn Pairplot| 
 | **[Linear_Regression_Prophet.ipynb](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Linear_Regression_Prophet.ipynb)** | Linear Regression, Prophet, KNN, RandomForest, and Seaborn |
 | **[Regional_Correlation.ipynb](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Regional_Correlation.ipynb)** | Regional Analysis | 
 | **[.gitignore](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/.gitignore)** | Git ignore  |
 | | |
-**Presentation:** 
-| **[Factors_Impacting_Global_Happiness.pdf](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Factors_Impacting_Global_Happiness.pdf)** | Powerpoint used in Presentation |
+**PRESENTATION :** 
+| **[Factors_Impacting_Global_Happiness.pdf](https://github.com/crmartella/WorldHappinessReportMSUBootcamp/blob/main/Factors_Impacting_Global_Happiness.pdf)** | Powerpoint used in presentation |
 
 
 ## Acknowledgments
