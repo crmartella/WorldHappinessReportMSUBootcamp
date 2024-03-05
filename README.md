@@ -39,7 +39,7 @@ To explore our findings and analysis, follow these steps:
 
 2. Based on our findings, we selected other variables to run additional models to study correlations further.
 
-3. We used those selected variables to predict how much of an impact those variables have on the outcome with a goal of increasing a particular region's happiness score.
+3. We used those selected variables to predict how much of an impact those variables have on the outcome.
 
 4. What would life be like with and without the economic crash of 2008 and 2009 and the COVID-19 pandemic of 2020 and 2021? 
 ## **Data Overview**
@@ -56,7 +56,7 @@ time?”
 
 #### The happiness rankings according to the GWP will be referred to as either "Life Ladder" or "Happiness Score" throughout this project.
 
-### Variable Definitions
+### Dataset Explanations
 
 - **Life Ladder (Happiness Score)**
 : Happiness ranking on a scale of 0 (saddest) to 10 (happiest).
