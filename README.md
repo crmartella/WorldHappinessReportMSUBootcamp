@@ -9,8 +9,7 @@
 <img src="Resources/team_pandas.png" alt="Happy Panda" width="800"/>
 
 ## Description
-Our project, developed by the Happy Tree Pandas team during the MSU AI Bootcamp, dives into the multifaceted factors influencing global happiness. Leveraging data found on Kaggle from the World Happiness Report spanning 2005 to 2023, we've crafted Python-based analyses to uncover key drivers of happiness across countries. Through our exploration, we aim to offer insights into creating a more joyful world.
-
+Our project dives into the multifaceted factors influencing global happiness. Leveraging World Happiness Report data from Kaggle spanning 2005 to 2023, we've crafted code to uncover key drivers of happiness across countries. 
 
 ## Getting Started
 
@@ -135,8 +134,6 @@ time?”
 
 ## Analysis
 - Corruption does not necessarily correlate with being happy. Countries will high levels of corruption can still have high levels of happiness.
-    - For example, Saudi Arabia, has an imputed corruption score of 1 (the highest possible score), yet their happiness scores are not directly affected.
-    - An additional note on corruption: corruption is highly subjective and varies with different standards throughout the world.
 - Central and Eastern Europe and Latin America & Carribiean regions had high corruption scores and high happiness.
 - Life Expectancy and per capita is highly correlated to happiness.
 
@@ -145,8 +142,10 @@ time?”
 
 - GDP is one of the largest driving factors affecting happiness.
 - Countries will high levels of corruption can still have high levels of happiness.
+    - For example, Saudi Arabia, has an imputed corruption score of 1 (the highest possible score), yet their happiness scores are not directly affected.
+    - An additional note on corruption: corruption is highly subjective and varies with different standards throughout the world.
 - Removing the financial crisis and COVID-19 pandemic of did not have a substantial impact on the projected future of happiness.
-- Over the life of the study, the dataset contained additional fields and was more complete, with additional countries.
+- Over the timescale of the study, the dataset contained additional fields and was more complete, with additional countries.
 
 - Final accuracy achieved:
     - Mean Squared Error: 0.0169
@@ -155,15 +154,15 @@ time?”
 ## Problems encountered
 - The WHR changed significantly over time
 - Besides GDP per capita & life expectancy, open ended questions
-- Model accuracy
+- Although we tried to identify major global incidents within the dataset (COVID and a world financial crisis), the data is likely affected by other events or have causal links beyond those we identified (which could be regional, social-political, environmental, and / or cultural).
 - Removing years for global and sociopolitical events
 - Generating a world map (GeoPandas)
 
 ## Future Considerations
 - Consider the complexity of other world events
-- Break apart regional considerations
-- Certain factors are highly subjective
+- Experiment with changing regional indicators 
 - Look at additional datasets about happiness
+
 
 ## Repository Files
 
