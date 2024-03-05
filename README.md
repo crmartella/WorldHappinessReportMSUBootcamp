@@ -11,7 +11,7 @@
 
 ## Description
 
-Building a program to study the factors that can contribute to a happier country/region over time. We will focus on the world’s top 25 saddest countries (based on 2023 data) to create a model to predict what factors have the most impact on influencing people of those countries to be happier over time. We are using data from the World Happiness Report that is available through Kaggle.
+Building a program to study the factors that can contribute to a happier region over time. We will focus on the world’s saddest region (based on 2023 data) to create a model to predict what factors have the most impact on influencing people of those countries to be happier over time. We are using data from the World Happiness Report that is available through Kaggle.
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ Building a program to study the factors that can contribute to a happier country
 ## Goals / Questions to be addressed
 1. We will use data from **2005-2018** to predict happiness for **2019-2023**, and compare that to actual data from **2019-2023** to determine the validity of our predictive model.
 
-2. We will predict what the happiness of the (top 25) saddest countries could look like between **2024 and 2034**.
+2. We will predict what the happiness the saddest region could look like between **2024 and 2034**.
 
 3. Based on our findings, we will select other variables to run additional models on to study correlations further.
 
