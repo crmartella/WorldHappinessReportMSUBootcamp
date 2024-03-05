@@ -29,7 +29,7 @@ Building a program to study the factors that can contribute to a happier planet.
 - Seaborn
 - Jupyter Notebook
 - Prophet
-- 
+
 
 ## Goals / Questions to be addressed
 1. We will use data from the World Happiness Report to predict future global happiness.
