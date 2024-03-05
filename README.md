@@ -1,7 +1,7 @@
 # Factors Impacting Global Happiness
 
 ## MSU AI Bootcamp: Project #2
-## Team Happy Tree Pandas [insert image]
+## Team Happy Tree Pandas 
 
 ### Members:
 * Cristian Goian
@@ -11,7 +11,7 @@
 
 ## Description
 
-Building a program to study the factors that can contribute to a happier region over time. We will focus on the world’s saddest region (based on 2023 data) to create a model to predict what factors have the most impact on influencing people of those countries to be happier over time. We are using data from the World Happiness Report that is available through Kaggle.
+Building a program to study the factors that can contribute to a happier planet. We will focus on the world’s saddest region (based on 2023 data) to create a model to predict what factors have the most impact on influencing people of those countries to be happier over time. We are using data from the World Happiness Report that is available through Kaggle.
 
 ## Getting Started
 
@@ -29,11 +29,12 @@ Building a program to study the factors that can contribute to a happier region 
 - Seaborn
 - Jupyter Notebook
 - Prophet
+- 
 
 ## Goals / Questions to be addressed
-1. We will use data from **2005-2018** to predict happiness for **2019-2023**, and compare that to actual data from **2019-2023** to determine the validity of our predictive model.
+1. We will use data from the World Happiness Report to predict future global happiness.
 
-2. We will predict what the happiness the saddest region could look like between **2024 and 2034**.
+2. We will predict what the happiness the saddest region could look like.
 
 3. Based on our findings, we will select other variables to run additional models on to study correlations further.
 
@@ -97,7 +98,6 @@ time?”
 - **Confidence In National Government**
 : Institutional trust
 
-
 ### **Data Splitting For Analysis**
 
 #### We split our data in a few different ways to make our comparisons. 
@@ -110,21 +110,21 @@ time?”
 - Latin America and Caribbean	
 - Middle East and North Africa	
 - North America and ANZ	
-- South Asia	Southeast Asia	
+- Southeast Asia	
 - Sub-Saharan Africa	
 - Western Europe
 
 #### We also considered historical points in time (in the range of our data set, 2005-2023) that may have affected global happiness scores. We decided on **two** major incidents:
 - The global economic recession that impacted our world economy. This took place during 2008 and 2009.
-- The global COVID-19 Pandemic. The impact of this is appparent in 2021 and 2022.
+- The global COVID-19 Pandemic. The impact of this is appparent in 2020 and 2021.
 
 #### Here is a dictionary to explain the  organization of these datasets:
 - **Crash**
 : 2008 & 2009.
 - **COVID**
-: 2021 & 2022.
+: 2020 & 2021.
 - **Eutopia**
-: No Crash and No COVID. The years 2008, 2009, 2021, and 2022 are dropped from the dataset. The flaws of our global history are essentially erased.
+: No Crash and No COVID. The years 2008, 2009, 2020, and 2021 are dropped from the dataset. The flaws of our global history are essentially erased.
 - **Dystopia**
 : Only Crash and COVID years. All other years are dropped from the data set.
 - **Actual**
@@ -152,20 +152,48 @@ time?”
 6. **Draw Conclusions**
     - Make observations based on analysis.
 
+## Data Clean-up
+### Our CSV can be found under: **Resources/WHR 2005 to 2023.csv**
+### Our process:
+- Generated a list of data types
+- Checked for null values
+- Handled missing values by filling with the mean values of the scores
 
 ## Analysis
+- Corruption does not necessarily correlate with being happy. Countries will high levels of corruption can still have high levels of happiness
+    - For example, Saudi Arabia, has an imputed corruption score of 100%, yet their happiness scores are not directly affected.
+    - An additional note on corruption: corruption is highly subjective and varies with different standards throughout the world.
+- Central and Eastern Europe and Latin America & Carribiean regions had high corruption scores and high happiness
+- Life Expectancy and per capita is highly correlated to happiness.
+
 ## Conclusions
-- Life Expectancy and per capita is highly correlated to happiness
-- Corruption is very vague.
+
+- GDP is one of the largest driving factors affecting happiness.
+- Countries will high levels of corruption can still have high levels of happiness
+- Removing the financial crisis and COVID-19 pandemic of did not have a substantial impact on the projected future of happiness.
+- Over the life of the study, the dataset contained additional fields and was more complete, with additional countries.
+
+- Final accuracy achieved:
+    - Mean Squared Error: 0.0169
+    - R^2 Score: 0.9316
 
 ## Problems encountered
+- The WHR changed significantly over time
+- Besides GDP per capita & life expectancy, open ended questions
+- Model accuracy
+- Removing years for global and sociopolitical events
+- Generating a world map (geopandas)
 
 ## Future Considerations
-
+- Consider the complexity of other world events
+- Break apart regional considerations
+- Certain factors are highly subjective
+- Look at additional datasets about happiness
 ## Acknowledgments
 
 - World Happiness Report (2005-2022) Kaggle Data Set  - [https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present/data](https://www.kaggle.com/datasets/usamabuttar/world-happiness-report-2005-present/data)
 - World Happiness Report (2023) Kaggle Data Set -  [https://www.kaggle.com/datasets/sazidthe1/global-happiness-scores-and-factors?select=WHR_2023.csv](https://www.kaggle.com/datasets/sazidthe1/global-happiness-scores-and-factors?select=WHR_2023.csv)
 - Statistical Appendix: Latest version - March 13,2023 - [https://happiness-report.s3.amazonaws.com/2023/WHR+23_Statistical_Appendix.pdf](https://happiness-report.s3.amazonaws.com/2023/WHR+23_Statistical_Appendix.pdf)
 - World Happiness Report Home - [https://worldhappiness.report/](https://worldhappiness.report/)
-- World map [world map reference link]()
+
+
